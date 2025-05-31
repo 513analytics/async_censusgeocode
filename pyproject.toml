@@ -1,0 +1,36 @@
+[project]
+name = "async-censusgeocode"
+version = "0.1.0"
+description = "Thin Python wrapper for the US Census Geocoder utilizing httpx AsyncClient adapted from the original censusgeocode package"
+keywords = ["census", "geocode", "api"]
+license-files = ["LICENSE"]
+authors = [{name="Bryan Corder", email="info@513analytics.com"}]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent"
+    ]
+readme = {file ="README.md", content-type = "text/markdown"}
+requires-python = ">=3.9"
+dependencies = [
+    "httpx>=0.28.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-asyncio>=1.0.0",
+    "pytest-cov>=6.1.1",
+]
+
+[project.urls]
+Repository = "https://github.com/513analytics/async_censusgeocode"
+Issues = "https://github.com/513analytics/async_censusgeocode/issues"
+
+[project.scripts]
+async-censusgeocode-cli = "cli:main"

@@ -1,0 +1,27 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept: ["*/*"]
+        Accept-Encoding: ["gzip, deflate"]
+        Connection: [keep-alive]
+        User-Agent: [python-requests/2.18.4]
+      method: GET
+      uri: https://geocoding.geo.census.gov/geocoder/geographies/coordinates?format=json&y=43&x=-74&vintage=Current_Current&benchmark=Public_AR_Current
+    response:
+      body:
+        {
+          string: '{"result":{"geographies":{"States":[{"STATENS":"01779796","GEOID":"36","CENTLAT":"+42.9196122","AREAWATER":"19256655138","STATE":"36","BASENAME":"New York","STUSAB":"NY","OID":"27490100833860","LSADC":"00","FUNCSTAT":"A","INTPTLAT":"+42.9133974","DIVISION":"2","NAME":"New York","REGION":"1","OBJECTID":1,"CENTLON":"-075.5941454","AREALAND":"122049256191","INTPTLON":"-075.5962723","MTFCC":"G4000"}],"Combined Statistical Areas":[{"POP100":"","GEOID":"104","CENTLAT":"+42.9541907","AREAWATER":"527568273","BASENAME":"Albany-Schenectady, NY","OID":"2619034687907970","LSADC":"M0","FUNCSTAT":"S","INTPTLAT":"+42.9540614","NAME":"Albany-Schenectady, NY CSA","OBJECTID":167,"CSA":"104","CENTLON":"-073.9003745","INTPTLON":"-073.9005139","AREALAND":"15652489291","HU100":"","MTFCC":"G3100"}],"County Subdivisions":[{"COUSUB":"28112","GEOID":"3609128112","CENTLAT":"+43.0293385","AREAWATER":"3066692","STATE":"36","BASENAME":"Galway","OID":"27690724407700","LSADC":"43","FUNCSTAT":"A","INTPTLAT":"+43.0321923","NAME":"Galway town","OBJECTID":28121,"CENTLON":"-074.0308806","COUSUBCC":"T1","AREALAND":"113494742","INTPTLON":"-074.0320790","MTFCC":"G4040","COUSUBNS":"00978985","COUNTY":"091"}],"Counties":[{"GEOID":"36091","CENTLAT":"+43.1071202","AREAWATER":"87488004","STATE":"36","BASENAME":"Saratoga","OID":"27590724407683","LSADC":"06","FUNCSTAT":"A","INTPTLAT":"+43.1061353","NAME":"Saratoga County","OBJECTID":2717,"CENTLON":"-073.8637030","COUNTYCC":"H1","COUNTYNS":"00974143","AREALAND":"2097812299","INTPTLON":"-073.8553872","MTFCC":"G4020","COUNTY":"091"}],"2024 State Legislative Districts - Upper":[{"GEOID":"36044","CENTLAT":"+43.0980173","AREAWATER":"90233511","STATE":"36","BASENAME":"44","OID":"2129035781145280","SLDU":"044","LSADC":"LU","FUNCSTAT":"N","INTPTLAT":"+43.0993778","NAME":"State Senate District 44","OBJECTID":919,"CENTLON":"-073.8646733","LSY":"2024","AREALAND":"2162451106","INTPTLON":"-073.8691843","MTFCC":"G5210","LDTYP":"O"}],"2024 State Legislative Districts - Lower":[{"GEOID":"36112","CENTLAT":"+42.9774389","SLDL":"112","AREAWATER":"39648953","STATE":"36","BASENAME":"112","OID":"2139035781145341","LSADC":"L3","FUNCSTAT":"N","INTPTLAT":"+42.9809581","NAME":"Assembly District 112","OBJECTID":953,"CENTLON":"-073.9719108","LSY":"2024","AREALAND":"963224341","INTPTLON":"-073.9743060","MTFCC":"G5220","LDTYP":"O"}],"2020 Census Blocks":[{"SUFFIX":"","GEOID":"360910615001050","CENTLAT":"+43.0049410","BLOCK":"1050","AREAWATER":"43363","STATE":"36","BASENAME":"1050","OID":"210701004832721","LSADC":"BK","FUNCSTAT":"S","INTPTLAT":"+43.0050138","NAME":"Block 1050","OBJECTID":2096690,"TRACT":"061500","CENTLON":"-073.9972945","BLKGRP":"1","AREALAND":"2071885","INTPTLON":"-073.9972405","MTFCC":"G5040","LWBLKTYP":"B","UR":"R","COUNTY":"091"}],"Census Tracts":[{"GEOID":"36091061500","CENTLAT":"+43.0293385","AREAWATER":"3066692","STATE":"36","BASENAME":"615","OID":"20790725018479","LSADC":"CT","FUNCSTAT":"S","INTPTLAT":"+43.0321923","NAME":"Census Tract 615","OBJECTID":29102,"TRACT":"061500","CENTLON":"-074.0308806","AREALAND":"113494742","INTPTLON":"-074.0320790","MTFCC":"G5020","COUNTY":"091"}],"119th Congressional Districts":[{"GEOID":"3620","CENTLAT":"+42.7843073","CDSESSN":"119","AREAWATER":"96138091","BASENAME":"20","STATE":"36","OID":"2119035952746644","LSADC":"C2","FUNCSTAT":"N","INTPTLAT":"+42.7892269","NAME":"Congressional District 20","OBJECTID":222,"CENTLON":"-073.8951154","CD119":"20","AREALAND":"3538035526","INTPTLON":"-073.8980014","MTFCC":"G5200"}]},"input":{"vintage":{"isDefault":true,"id":"4","vintageName":"Current_Current","vintageDescription":"Current Vintage - Current Benchmark"},"location":{"x":-74.0,"y":43.0},"benchmark":{"isDefault":true,"benchmarkDescription":"Public Address Ranges - Current Benchmark","id":"4","benchmarkName":"Public_AR_Current"}}}}',
+        }
+      headers:
+        Cache-Control: [private, "no-cache, no-store, max-age=0"]
+        Content-Language: [en-US]
+        Content-Type: [application/json]
+        Date: ["Fri, 10 Nov 2017 18:15:11 GMT"]
+        Expires: ["Wed, 31 Dec 1969 23:59:59 GMT"]
+        Pragma: [no-cache]
+        Strict-Transport-Security: [max-age=31536000]
+        Vary: [Origin]
+        X-Frame-Options: [Deny]
+      status: { code: 200, message: OK }
+version: 1
