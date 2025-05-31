@@ -18,8 +18,8 @@ import pytest
 @pytest.mark.asyncio
 async def test_geocode_address_real():
     """Test geocoding a real address using the Census Geocoder API (integration)."""
-    client = AsyncCensusGeocode()
-    result = await client.address(
+    acg = AsyncCensusGeocode()
+    result = await acg.address(
         street="1600 Pennsylvania Ave NW", city="Washington", state="DC", zip="20500"
     )
     assert isinstance(result, List)
@@ -30,9 +30,9 @@ async def test_geocode_address_real():
 @pytest.mark.asyncio
 async def test_reverse_geocode_real():
     """Test reverse geocoding real coordinates using the Census Geocoder API (integration)."""
-    client = AsyncCensusGeocode()
+    acg = AsyncCensusGeocode()
     # Coordinates for the White House
-    result = await client.coordinates(x=-77.0365, y=38.8977)
+    result = await acg.coordinates(x=-77.0365, y=38.8977)
     assert isinstance(result, dict)
     assert "2020 Census Blocks" in result.keys()
     assert "Census Tracts" in result.keys()

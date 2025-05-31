@@ -11,10 +11,10 @@ Basic example:
 ```python
 import async_censusgeocode as acg
 
-acg.coordinates(x=-76, y=41)
-acg.onelineaddress('1600 Pennsylvania Avenue, Washington, DC')
-acg.address('1600 Pennsylvania Avenue', city='Washington', state='DC', zip='20006')
-acg.addressbatch('data/addresses.csv')
+await acg.coordinates(x=-76, y=41)
+await acg.onelineaddress('1600 Pennsylvania Avenue, Washington, DC')
+await acg.address('1600 Pennsylvania Avenue', city='Washington', state='DC', zip='20006')
+await acg.addressbatch('data/addresses.csv')
 ```
 
 Use the returntype keyword to specify 'locations' or 'geographies'. 'Locations' yields structured information about the address, and 'geographies' yields information about the Census geographies. Geographies is the default.
@@ -26,7 +26,7 @@ acg.onelineaddress('1600 Pennsylvania Avenue, Washington, DC', returntype='locat
 Queries return a CensusResult object, which is basically a Python list with an extra 'input' property, which the Census returns to tell you how they interpreted your request.
 
 ```python
->>> result = acg.coordinates(x=-76, y=41)
+>>> result = await acg.coordinates(x=-76, y=41)
 >>> result.input
 {
     u'vintage': {
@@ -104,7 +104,7 @@ By default, the geocoder uses the "Current" vintage and benchmarks. To use anoth
 ```python
 from async_censusgeocode import AsyncCensusGeocode
 acg = AsyncCensusGeocode(benchmark='Public_AR_Current', vintage='Census2020_Current')
-acg.onelineaddress(foobar)
+await acg.onelineaddress(foobar)
 ```
 
 The Census may update the available benchmarks and vintages. Review the Census Geocoder docs for the currently available [benchmarks](https://geocoding.geo.census.gov/geocoder/benchmarks) and [vintages](https://geocoding.geo.census.gov/geocoder/vintages?form).
